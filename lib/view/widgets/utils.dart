@@ -5,7 +5,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 class Utils {
   static toastMessage(String message) {
-    Fluttertoast.showToast(msg: message, backgroundColor: Colors.black, textColor: Colors.white, timeInSecForIosWeb: 5);
+    Fluttertoast.showToast(
+        msg: message, backgroundColor: Colors.white10, textColor: Colors.black87, timeInSecForIosWeb: 5);
   }
 
   static void flushBarErrorMessage(String message, BuildContext context) {

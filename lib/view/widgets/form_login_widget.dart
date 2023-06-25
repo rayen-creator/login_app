@@ -104,10 +104,9 @@ Widget form_widget_login(
                   if (FormKey.currentState!.validate()) {
                     context.read<AuthViewModel>().loginApi(
                         UserModel(
-                          username: emailcontroller.text,
                           email: emailcontroller.text,
                           password: passwordcontroller.text,
-                        ),
+                        ).toJson(),
                         context);
                     if (kDebugMode) {
                       print("validate");

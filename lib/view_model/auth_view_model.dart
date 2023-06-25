@@ -15,23 +15,22 @@ class AuthViewModel with ChangeNotifier {
     _authRepo.loginApi(data).then((value) {
       final userPreference = Provider.of<UserViewModel>(context, listen: false);
       userPreference.saveUser(UserModel(
-        username: value['username'].toString(),
         token: value['token'].toString(),
       ));
+      Utils.toastMessage('Login Successfully');
+      // Utils.flushBarErrorMessage("message", context);
+      Navigator.pushNamed(context, RoutesName.home);
     }).onError((error, stackTrace) {
       if (kDebugMode) {
         print(error);
       }
     });
-
-    Utils.toastMessage('Login Successfully');
-    Navigator.pushNamed(context, RoutesName.login);
   }
 
   Future<void> signUpapi(dynamic data, BuildContext context) async {
     _authRepo.registre(data).then((value) {
       Utils.toastMessage('Signed up Successfully');
-      Navigator.pushNamed(context, RoutesName.home);
+      Navigator.pushNamed(context, RoutesName.login);
     }).onError((error, stackTrace) {
       if (kDebugMode) {
         print(error);

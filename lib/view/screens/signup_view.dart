@@ -6,7 +6,7 @@ import 'package:mvvm_app/view/widgets/form_signup_widget.dart';
 import 'package:mvvm_app/view_model/auth_view_model.dart';
 import 'package:provider/provider.dart';
 
-import '../model/user_model.dart';
+import '../../model/user_model.dart';
 
 class SignupView extends StatefulWidget {
   const SignupView({Key? key}) : super(key: key);
@@ -47,7 +47,7 @@ class _SignupViewState extends State<SignupView> {
                 body: Stack(
                   children: [
                     Container(
-                      decoration: BoxDecoration(color: Colors.blueAccent),
+                      decoration: const BoxDecoration(color: Colors.blueAccent),
                     ),
                     Positioned(
                       top: 0.0,
@@ -75,7 +75,7 @@ class _SignupViewState extends State<SignupView> {
                         Padding(
                           padding: const EdgeInsets.all(20.0),
                           child: Card(
-                              color: Colors.white.withOpacity(0.8),
+                              color: Colors.white.withOpacity(0.9),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25.0),
                               ),

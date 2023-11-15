@@ -1,6 +1,6 @@
-# mvvm_app
+# Auth app
 
-A new Flutter project.
+UI app of signIn/signup pages
 
 ## Getting Started
 
